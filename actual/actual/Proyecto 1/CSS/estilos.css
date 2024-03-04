@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+:root{
+    --texto: black; 
+    --hover: violet;
+    --azulcielo: paleturquoise;
+    --azul: blue;
+    --blanco: white;
+}
+*,
+::before,
+::after{
+    margin: 5px;
+    padding: 0;
+    box-sizing: inherit;
+}
+  
+body{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+
+}
+
+.header {
+    position: fided;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--azulcielo);
+    padding: 0 5% ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    
+}
+
+.logo{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: var(--texto);
+    font-weight: 200;
+    
+}
+
+.navigation ul{
+    list-style: none;
+}
+.header .navigation ul li{
+    float: left;
+    position: relative;
+   
+}
+.header .navigation ul li a{ /*forma al menu */
+    font-size: 18px;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 30px;
+    display: block;
+    transition: all .2s ease;
+}
+.header .navigation ul li a:hover {
+    background-color: var(--hover);
+}
+.header .navigation ul li ul {
+    position: absolute;
+    right: 0;
+    background-color: var(--azul);
+    display: none;
+}
+.header.navigation ul li ul li a {
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.header .navigation ul li ul li ul  {
+position: absolute;
+top: 0;
+right: 300px;
+}
+.header.navigation ul li ul li {
+    width: 100px;
+}
+.header .navigation ul li:hover > ul {
+    display: initial;
+}
+
+#toggle,
+.header label{
+    display:none;
+    cursor: pointer;
+}
+header img{
+    width: 50px;
+    height: 40px;
+}
+
+.cajainformacion:hover{
+    box-shadow: 0 10px 20px var(--texto);
+    
+}
+.imagenproducto:hover{
+    transform: scale(1.2);
+    transition: all .5s;
+    
+}
+
+/*Aqui me quede Arely  */  
+
+.inicio{
+    background-color: var(--azul);
+    color: var(--texto);
+    font-size: 30px;
+    font-family: Tahoma;
+}
+
+.categorias{
+    background-color: var(--azul);
+    color: var(--texto);
+    font-size: 30px;
+    font-family: Tahoma;
+}
+
+.ofertas{
+    background-color: var(--azul);
+    color: var(--texto);
+    font-size: 30px;
+    font-family: Tahoma;
+}
+
+.acerca-de{
+    background-color: var(--azul);
+    color: var(--texto);
+    font-size: 30px;
+    font-family: Tahoma;
+}
+
+/*Aqui empiezan estilos de imagenes*/
+.caja{
+    width: 100%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap: 2rem;
+    text-align: center;
+    padding: 5px 5px;
+    
+
+}
+.precioproducto{
+    margin: 10px;
+    font-size: 30px;
+    color:black
+}
+.cajainformacion{
+    border-radius: 10px;
+    color: var(--blanco);
+    background-color: var(--blanco);
+}
+.tituloproducto{
+    background-color: var(--azul);
+    font-family: "Poppins", sans-serif;
+    padding: 5px 5px;
+}
+
+.btn{
+    background-color: var(--azul);
+    font-family: "Poppins", sans-serif;
+    padding: 20px 40px;
+    color: white;
+    border-radius: 10px;
+    border: px;
+    position: relative;
+    top: -10px;
+}
+.btn:hover{
+    background-color: var(--hover);
+
+}
+.subtitulos{
+    background-color: var(--azul);
+    color: var(--blanco);
+    text-align: center;
+}
+iframe{
+    width: 100%;
+}
+
+footer{
+    background-color: paleturquoise;
+    color: var(--texto);
+    font-family: Tahoma;
+    position: fided;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    
+}
+
+@media(max-width: 950px){
+
+    .header label {
+        display: initial;
+    }
+    .header{
+        padding: 20px 10px;
+    }
+    .header .navigation{
+        position:absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--hover);
+        display: none;
+    
+
+    }
+    .header .navigation ul li{
+        width: 100%;
+    }
+    .header .navigation ul li a {
+        padding: 8px 30px 8px 10%;
+    }
+    .header .navigation ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+    .header .navigation ul li ul li{
+    background-color: var(--azul);
+    }
+    .header .navigation ul li ul li ul{
+    position: reative;
+    width: 100%;
+    left: 0;
+    }
+    .caja{
+        display:block;
+    }
+
+    #toggle:checked ~ .navigation {
+        display: block;
+    }
+}
+@media(max-width: 1024px){
+
+    .header label {
+        display: initial;
+    }
+    .header{
+        padding: 20px 10px;
+    }
+    .header .navigation{
+        position:absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--hover);
+        display: none;
+    
+
+    }
+    .header .navigation ul li{
+        width: 100%;
+    }
+    .header .navigation ul li a {
+        padding: 8px 30px 8px 10%;
+    }
+    .header .navigation ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+    .header .navigation ul li ul li{
+    background-color: var(--azul);
+    }
+    .header .navigation ul li ul li ul{
+    position: reative;
+    width: 100%;
+    left: 0;
+    }
+    .caja{
+        display:block;
+    }
+
+    #toggle:checked ~ .navigation {
+        display: block;
+    }
+}
+@media(max-width: 767px){
+
+    .header label {
+        display: initial;
+    }
+    .header{
+        padding: 20px 10px;
+    }
+    .header .navigation{
+        position:absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--hover);
+        display: none;
+    
+
+    }
+    .header .navigation ul li{
+        width: 100%;
+    }
+    .header .navigation ul li a {
+        padding: 8px 30px 8px 10%;
+    }
+    .header .navigation ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+    .header .navigation ul li ul li{
+    background-color: var(--azul);
+    }
+    .header .navigation ul li ul li ul{
+    position: reative;
+    width: 100%;
+    left: 0;
+    }
+    .caja{
+        display:block;
+    }
+
+    #toggle:checked ~ .navigation {
+        display: block;
+    }
+}
